@@ -1,0 +1,23 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: ab744050-efd4-4e8a-9c55-977f8a95590e
+  title: CS214
+  subtitle: Concepts of Programming Languages
+  description: Concepts of Programming Languages course taught during the Spring 2026.
+  # keywords: []
+  authors:
+    - name: Eric Araújo
+  github: https://github.com/ericaraujophd/26sp-cs214
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+  toc:
+    - file: index.md
+    - file: guide.md
+site:
+  template: book-theme
+
+  options:
+    favicon: static/Calvin-150-logo.png
+    logo: static/calvin-logo.png
+    logo_dark: static/Calvin-logo-inverse.png
+
