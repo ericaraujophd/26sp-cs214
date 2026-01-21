@@ -16,16 +16,31 @@ subtitle: The Roadmap for This Course
 
 CS214 is organized by **week**. Each week is structured as follows:
 
-:::{admonition} Weekly Structure
-:class: tip
-**Classroom** sessions on **Mondays** and **Wednesdays** at **SB372**.
+- 🧑🏼‍🏫 **Lectures**  on **Mondays** and **Wednesdays** (SB372) at 2.45pm - 3.50pm.
+- 👩🏾‍💻 **Laboratories** on **Fridays** (SB354) at 2.45pm - 5.05pm.
 
-- **Section A** meets at 2.45pm - 3.50pm
+---
 
-**Laboratory** sessions on **Fridays** at 2.45pm - 5.05pm.
+## Schedule
 
-- **Section A** meets at **SB354**
-:::
+| Week | Date | Topics | Lab | Project |
+|------|------|--------|-----|---------|
+| 0 | Jan 19 | What are "Concepts of Programming Languages?" | ✅ #1 | ✅ #1 |
+| 1 | Jan 26 | Programming Language Syntax | ✅ #2 | ✅ #2 |
+| 2 | Feb 2 | Names, Scopes, and Bindings | ✅ #3 | ✅ #3 |
+| 3 | Feb 9 | Program Semantics | ✅ #4 | ✅ #4 |
+| 4 | Feb 16 | Control Flow | ✅ #5 | ✅ #5 |
+| 5 | Feb 23 | Exam 1 | ❌ | ❌ |
+| 6 | Mar 2 | Type Systems | ✅ #6 | ✅ #6 |
+| 7 | Mar 9 | Spring Break | ❌ | ❌ |
+| 8 | Mar 16 | Subroutines and Control Abstraction | ✅ #7 | ✅ #7 |
+| 9 | Mar 23 | Exam 2 | ❌ | ❌ |
+| 10 | Mar 30 | Object Orientation | ✅ #8 | ✅ #8 |
+| 11 | Apr 6 | Functional Languages | ✅ #9 | ✅ #9 |
+| 12 | Apr 13 | Scripting | ✅ #10 | ✅ #10 |
+| 13 | Apr 20 | Concurrency | ✅ #11 | ✅ #11 |
+| 14 | Apr 27 | Concurrency + Exam 3 | ✅ #12 | ✅ #12 |
+| 15 | May 4 | Exams Week | ❌ | ❌ |
 
 ---
 

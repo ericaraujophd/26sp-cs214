@@ -14,6 +14,11 @@ project:
     - file: index.md
     - file: guide.md
     - file: organization.md
+    - title: void main(){
+      children:
+        - title: class week00();
+          children:
+            - file: week00/slos.md
 site:
   template: book-theme
 
