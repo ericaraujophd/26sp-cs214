@@ -21,19 +21,19 @@ If you fail to do any of these things, you will likely struggle in this course. 
 
 ## Class Policies
 
-I (Prof. Araújo) want to make this course as enjoyable and rewarding as possible for you. To that end, I have a few policies that I want to share with you upfront. I also want to mention that as a first time traveler in this course, I am open to feedback and suggestions on how to improve the course for future semesters.
+I (Prof. Araújo) want to make this course as enjoyable and rewarding as possible for you. To that end, I have a few policies that I want to share with you upfront. I also want to mention that as this is my first time teaching this course, I am open to feedback and suggestions on how to improve the course for future semesters.
 
 ### Regarding Technology in the Classroom
 
-Assume this course will require a lot of hours of work outside of class. To make your life easier, **do not** use phones or laptops during class, unless you have a documented accommodation that requires you to do so. This will help you stay focused and engaged during lectures. I know it might be hard at first, but I promise you that it will pay off in the long run.
+This course requires significant work outside of class, so classroom time is precious for learning core concepts. To maximize your focus and engagement during lectures, **do not** use phones or laptops during class, unless you have a documented accommodation that requires you to do so. I know it might be hard at first, but I promise you that it will pay off in the long run.
 
-I am also aware that some of you want to take notes in your laptops. Experience and research show that taking notes by hand helps you retain information better than typing them. If you really need to use a laptop for note taking, please sit in the back of the class to minimize distractions to your peers.
+I am also aware that some of you want to take notes on your laptops. Experience and research show that taking notes by hand helps you retain information better than typing them. If you really need to use a laptop for note taking, please sit in the back of the class to minimize distractions to your peers.
 
 ### Regarding Attendance
 
 Class attendance is **optional**. Come to learn. Take it seriously. Show up.
 
-Also, lab attendance is **required**! Lab is **not optional**. Skipping lab may result in you doing poorly in class.
+Lab attendance is **required** and critical to your success. Skipping lab will likely result in poor performance in the course.
 
 **Missing class due to illness:** if you are going to miss class due to (physical or mental) illness, please send me an email before class.
 
@@ -45,9 +45,9 @@ If you are a student needing reasonable modifications for pregnancy and related 
 
 ### Regarding Diversity and Inclusion
 
-Inside and outside of the classroom, I work to treat every person with equal respect, regardless of racial identity, gender identity, physicality, brain chemistry, nationality, political leanings, and religious background.
+Inside and outside of the classroom, I work to treat every person with equal respect, regardless of racial identity, gender identity, physical ability, brain chemistry, nationality, political leanings, and religious background.
 
-Whoever you are, you are fearfully and wonderfully made. God delights in diversity and I do, too. We humans need diverse viewpoints because every viewpoint, on its own, has blind spots. That has been proven to be true in technology-related fields, where under-represented minorities are significantly under-represented in the working world. When companies work hard to rectify this, they find their products and services improve. We have found this to be true in Computer Science classrooms as well.
+Whoever you are, you are fearfully and wonderfully made. God delights in diversity and I do, too. We humans need diverse viewpoints because every viewpoint, on its own, has blind spots. This has been proven true in technology-related fields, where certain groups remain significantly under-represented in the workforce. When companies work hard to rectify this, they find their products and services improve. We have found this to be true in Computer Science classrooms as well.
 
 :::{admonition} Warning!
 :class: warning
@@ -56,7 +56,7 @@ If you or someone else in this class is **hurt** by something I say or do in cla
 
 ---
 
-## Regardgin Academic Integrity
+## Regarding Academic Integrity
 
 We take academic integrity very seriously. Cheating, plagiarism, and other forms of academic dishonesty will not be tolerated in this course. If you are caught cheating or plagiarizing, your situation will be dealt with in accordance with Calvin’s policies on Academic Honesty. Likewise, giving another person your work to submit as their own constitutes academic fraud and may result in a failing grade (F) for both parties.
 
@@ -69,12 +69,12 @@ Feel free to discuss ideas with us or with your classmates, but **don’t copy c
 
 Consider these rules of thumb:
 
-- If you found it efficient to use copy/paste or use a generative language model to create more than one or two lines of your application, you must document the original source of the code.
+- If you find it efficient to use copy/paste or use a generative language model to create more than one or two lines of your application, you must document the original source of the code.
 - If the moment you figure out how to do something occurs while you are looking at a website or at the output of a generative language model, you should document that website.
 
 Note that these rules of thumb apply to the code supplied in this course’s materials as well.
 
 :::{admonition} Warning!
 :class: warning
-Our graders will be using a tool called the **Measure of Software Similarity (MOSS)** to check all submissions against all other submissions. If two submissions are found to be significantly similar, we will assume cheating has happened. Note that this software is pretty smart. It knows what computer language it is inspecting and can determine if two submissions are the same except for differences in variable names, e.g.
+Our graders will be using a tool called the **Measure of Software Similarity (MOSS)** to check all submissions against all other submissions. If two submissions are found to be significantly similar, we will assume cheating has happened. Note that this software is pretty smart. It knows what computer language it is inspecting and can determine if two submissions are the same except for superficial differences such as variable names or comment styles.
 :::

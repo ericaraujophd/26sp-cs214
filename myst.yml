@@ -13,6 +13,7 @@ project:
   toc:
     - file: index.md
     - file: guide.md
+    - file: organization.md
 site:
   template: book-theme
 
