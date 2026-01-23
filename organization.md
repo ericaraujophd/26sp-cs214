@@ -19,6 +19,14 @@ CS214 is organized by **week**. Each week is structured as follows:
 - 🧑🏼‍🏫 **Lectures**  on **Mondays** and **Wednesdays** (SB372) at 2.45pm - 3.50pm.
 - 👩🏾‍💻 **Laboratories** on **Fridays** (SB354) at 2.45pm - 5.05pm.
 
+:::{admonition} ⏰ Labs and Projects Due Dates
+:class: important
+:icon: false
+
+- Labs are due on **Tuesdays at 11.59pm** of the week they are assigned.
+- Projects are due on **Thursdays at 11.59pm** of the following week they are assigned.
+:::
+
 ---
 
 ## Schedule
@@ -59,7 +67,7 @@ You won't need to configure your personal computer for this course, as we will u
 |---------------------|------------|
 | Labs (12)            | 25%       |
 | Projects (12)        | 25%       |
-| Quizzes (4)          | 5% (2 lowest grades are dropped)         |
+| Quizzes (~30)          | 5% (2 lowest grades are dropped)         |
 | Exams (3)         | 25% (lowest grade is dropped)        |
 | Final Exam          | 20%        |
 
