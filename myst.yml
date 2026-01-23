@@ -14,7 +14,7 @@ project:
     - file: index.md
     - file: guide.md
     - file: organization.md
-    - title: "Course* course = new Course()"
+    - title: "Course* course = new Course();"
       children:
         - title: "course->Week00"
           children:
