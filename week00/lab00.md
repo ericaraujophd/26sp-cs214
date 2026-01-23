@@ -554,3 +554,20 @@ In Ruby, comments begin with the `#` symbol and end at the end of the line. Go t
 ### 4.1 Submit Your Work
 
 When you have completed and tested your Ruby program, commit and push your changes to your GitHub repository. Make sure to include a meaningful commit message, such as "Completed circle_area.rb program". You can verify that the tests for Ruby passed by going to the "Actions" tab on your repository page and looking for the latest workflow run. If all Ruby tests passed, you should see a green check mark next to the workflow run.
+
+## Rubric
+
+| Task                                    | Points |
+|-----------------------------------------|--------|
+| Completed Java program                  | 10     |
+| Completed Ada program                   | 10     |
+| Completed Clojure program               | 10     |
+| Completed Ruby program                  | 10     |
+| **Total**                               | **40** |
+
+Ways students can lose points:
+
+- Failure to follow instructions
+- Syntax errors in any of the four programs
+- Programs do not compile or run successfully
+- Programs do not produce correct results for the test cases provided
