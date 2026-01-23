@@ -132,6 +132,14 @@ When you have completed and tested your Java program, commit and push your chang
 
 On your repository page on GitHub, verify that your latest commit is present and that your `CircleArea.java` file contains the complete program you wrote. You can also check if the tests for Java passed by going to the "Actions" tab on your repository page and looking for the latest workflow run. If all Java tests passed, you should see a green check mark next to the workflow run.
 
+:::{admonition} 🔎 Investigate
+:class: important
+:icon: false
+
+- How do Java's `print`, `println` and `printf` methods differ from one another?
+- When a real number is printed using `printf`, how can you control the number of decimal places being displayed?
+:::
+
 (lab00-ada)=
 ## 2. Ada Exercise
 
@@ -245,6 +253,14 @@ Test your program using the following data values, recording the program's outpu
 ### 2.4 Submit Your Work
 
 When you have completed and tested your Ada program, commit and push your changes to your GitHub repository. Make sure to include a meaningful commit message, such as "Completed circle_area.adb program". You can verify that the tests for Ada passed by going to the "Actions" tab on your repository page and looking for the latest workflow run. If all Ada tests passed, you should see a green check mark next to the workflow run.
+
+:::{admonition} 🔎 Investigate
+:class: important
+:icon: false
+
+- What is the difference between Ada's `Put_Line` and `Put` statements?
+- How can you control the precision of a real value being displayed by a `Put` statement?
+:::
 
 (lab00-clojure)=
 ## 3. Clojure Exercise
@@ -496,6 +512,13 @@ Clojure also supports *docstrings* - documentation comments that are enclosed wi
 
 When you have completed and tested your Clojure program, commit and push your changes to your GitHub repository. Make sure to include a meaningful commit message, such as "Completed circle_area.clj program". You can verify that the tests for Clojure passed by going to the "Actions" tab on your repository page and looking for the latest workflow run. If all Clojure tests passed, you should see a green check mark next to the workflow run.
 
+:::{admonition} 🔎 Investigate
+:class: important
+:icon: false
+- How do the `print`, `println`, and `printf` functions differ?
+- When displaying a real number, how can you control the number of decimal digits displayed by `printf`?
+:::
+
 (lab00-ruby)=
 ## 4. Ruby Exercise
 
@@ -550,6 +573,12 @@ The Ruby interpreter (`ruby`) will check the syntax of your program and if there
 When your program runs successfully, test its correctness by using the same data values used previously. Make certain your results are equivalent to those of our other languages before you continue.
 
 In Ruby, comments begin with the `#` symbol and end at the end of the line. Go through the program line by line and add comments that explain what each line is doing.
+
+:::{admonition} 🔎 Investigate
+:class: important
+:icon: false
+What is the difference between Ruby's `puts` and `print` methods?
+:::
 
 ### 4.1 Submit Your Work
 
