@@ -9,10 +9,10 @@ The problems to be solved are to compute the volume of geometric shapes given th
 
 | Shape | Formula | Notes | File Names |
 |-------|---------|-------|------------|
-| Cylinder | $V = \pi r^2 h$ | | `Cylinder.java`, `cylinder.adb`, `cylinder.clj`, `cylinder.rb` |
-| Cone | $V = \frac{1}{3} \pi r^2 h$ | | `Cone.java`, `cone.adb`, `cone.clj`, `cone.rb` |
-| Rectangular Prism | $V = l \times w \times h$ | | `RectangularPrism.java`, `rectangular_prism.adb`, `rectangular_prism.clj`, `rectangular_prism.rb` |
-| Pyramid | $V = \frac{1}{3} B h$ | $B$ is the area of the base | `Pyramid.java`, `pyramid.adb`, `pyramid.clj`, `pyramid.rb` |
+| Cylinder | $V = \pi r^2 h$ | $r$ is the radius of the base, $h$ is the height | `Cylinder.java`, `cylinder.adb`, `cylinder.clj`, `cylinder.rb` |
+| Cone | $V = \frac{1}{3} \pi r^2 h$ | $r$ is the radius of the base, $h$ is the height | `Cone.java`, `cone.adb`, `cone.clj`, `cone.rb` |
+| Rectangular Prism | $V = l \times w \times h$ | $l$ is the length, $w$ is the width, $h$ is the height | `RectangularPrism.java`, `rectangular_prism.adb`, `rectangular_prism.clj`, `rectangular_prism.rb` |
+| Pyramid | $V = \frac{1}{3} l w h$ | $l$ is the base length, $w$ is the base width, $h$ is the height (assumes a rectangular base where $B = l \times w$) | `Pyramid.java`, `pyramid.adb`, `pyramid.clj`, `pyramid.rb` |
 | Torus | $V = 2 \pi^2 R r^2$ | $R$ is the distance from the center of the tube to the center of the torus, $r$ is the radius of the tube | `Torus.java`, `torus.adb`, `torus.clj`, `torus.rb` |
 
 You must implement **all five shapes** in **all four languages** (20 programs total). Name your files exactly as shown in the table above.
