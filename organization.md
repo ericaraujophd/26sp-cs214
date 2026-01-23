@@ -23,8 +23,8 @@ CS214 is organized by **week**. Each week is structured as follows:
 :class: important
 :icon: false
 
-- Labs are due on **Tuesdays at 11.59pm** of the week they are assigned.
-- Projects are due on **Thursdays at 11.59pm** of the following week they are assigned.
+- 👩🏽‍💻 **Labs** are done in Teams of two and are due on **Tuesdays at 11.59pm** of the week they are assigned.
+- 🏡 **Projects** are done individually and are due on **Thursdays at 11.59pm** of the following week they are assigned.
 :::
 
 ---
