@@ -14,11 +14,12 @@ project:
     - file: index.md
     - file: guide.md
     - file: organization.md
-    - title: void main(){
+    - title: "Course* course = new Course()"
       children:
-        - title: class week00();
+        - title: "course->Week00"
           children:
             - file: week00/slos.md
+            - file: week00/lab00.md
 site:
   template: book-theme
 

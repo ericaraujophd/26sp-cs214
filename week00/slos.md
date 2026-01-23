@@ -1,5 +1,5 @@
 ---
-title: week00.slos();
+title: "->slos;"
 subtitle: // What is Concepts of Programming Languages?
 ---
 
