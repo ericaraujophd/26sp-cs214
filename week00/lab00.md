@@ -13,7 +13,7 @@ We will be using [Coder](https://coder.cs.calvin.edu/login) for this lab. Make s
 
 You want to use VSCode Desktop to connect to Coder. If you haven't installed VSCode yet, please do so by following [these instructions](https://code.visualstudio.com/docs/setup/setup-overview).
 
-Now, you need to [accept the assignment]() by creating a Team (give it a nice name) and ask your partner to join it. I highly recommend you find a partner first, so you don't create two separate teams. Once you have a team, go to Coder, open VSCode, and clone your assignment repository by following these steps:
+Now, you need to [accept the assignment by clicking in here](https://classroom.github.com/a/MWtsEbBy) and creating a Team (give it a nice name) and ask your partner to join it. I highly recommend you find a partner first, so you don't create two separate teams. Once you have a team, go to Coder, open VSCode, and clone your assignment repository by following these steps:
 
 1. Open VSCode and open the Terminal (``Ctrl + ` ``).
 2. On your GitHub classroom assignment page, copy the repository URL by clicking the green "Code" button and then clicking the clipboard icon.
