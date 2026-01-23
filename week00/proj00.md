@@ -22,7 +22,7 @@ You must implement **all five shapes** in **all four languages** (20 programs to
 If the name of the files do not match the expected names, the automated tests will fail and you will not get credit for your work. The same goes if some of the programs are missing.
 :::
 
-To start your project, go to [this link]() and accept the assignment. Once you have accepted and the repository is generated on github, go to Coder, open VSCode, and clone your assignment repository by following these steps:
+To start your project, go to [this link and accept the assignment](https://classroom.github.com/a/oj4v16V_). Once you have accepted and the repository is generated on github, go to Coder, open VSCode, and clone your assignment repository by following these steps:
 
 1. Open VSCode and open the Terminal (``Ctrl + ` ``).
 2. On your GitHub classroom assignment page, copy the repository URL by clicking the green "Code" button and then clicking the clipboard icon.

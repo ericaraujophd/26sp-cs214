@@ -20,6 +20,7 @@ project:
           children:
             - file: week00/slos.md
             - file: week00/lab00.md
+            - file: week00/proj00.md
 site:
   template: book-theme
 
