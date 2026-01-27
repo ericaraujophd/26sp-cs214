@@ -21,6 +21,48 @@ project:
             - file: week00/slos.md
             - file: week00/lab00.md
             - file: week00/proj00.md
+        - title: "course->Week01"
+          children:
+            - file: week01/slos.md
+        - title: "course->Week02"
+          children:
+            - file: week02/slos.md
+        - title: "course->Week03"
+          children:
+            - file: week03/slos.md
+        - title: "course->Week04"
+          children:
+            - file: week04/slos.md
+        - title: "course->Week05"
+          children:
+            - file: week05/slos.md
+        - title: "course->Week06"
+          children:
+            - file: week06/slos.md
+        - title: "course->Week07"
+          children:
+            - file: week07/slos.md
+        - title: "course->Week08"
+          children:
+            - file: week08/slos.md
+        - title: "course->Week09"
+          children:
+            - file: week09/slos.md
+        - title: "course->Week10"
+          children:
+            - file: week10/slos.md
+        - title: "course->Week11"
+          children:
+            - file: week11/slos.md
+        - title: "course->Week12"
+          children:
+            - file: week12/slos.md
+        - title: "course->Week13"
+          children:
+            - file: week13/slos.md
+        - title: "course->Week14"
+          children:
+            - file: week14/slos.md
 site:
   template: book-theme
 
