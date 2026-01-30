@@ -24,6 +24,7 @@ project:
         - title: "course->Week01"
           children:
             - file: week01/slos.md
+            - file: week01/lab01.md
         - title: "course->Week02"
           children:
             - file: week02/slos.md
