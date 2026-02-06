@@ -406,3 +406,103 @@ Take a few minutes to copy-paste this definition into your source file below you
 
 That concludes the Clojure part of this lab.
 
+## 4. Ruby Introduction
+
+Open the file `year_codes.rb`. Take a moment to study it, to see how it implements our basic algorithm, and compare it to the other "programs" you've seen.
+
+Lets begin by defining a Ruby function with a BNF:
+
+:::{code-block} yaml
+<FunctionDef>    ::= 'def' <identifier> <ParameterDecs> <StatementList> 'end' ;
+<ParameterDecs>  ::= '(' <ParameterDec> <MoreParameters> ')' | <ParameterDec> <MoreParameters> | ∅ ;
+<ParameterDec>   ::= <identifier> <DefaultArg> ;
+<DefaultArg>     ::= = <Expression> | ∅ ;
+:::
+
+If you study this BNF closely you'll recognize several unusual things about Ruby methods and parameters:
+
+- Ruby methods don't need to have parentheses around its parameters.
+- Ruby parameter declarations don't specify types.
+- Ruby methods aren't defined by braces, but rather by the keywords `def` and `end`. You'll find Ruby is something like Ada in this respect.
+- Ruby allows the use of `?` and `!` in method names. This allows you to write a method like `user.logged_in?` that returns a boolean.
+
+Using this information, write a method stub called `yearCode` with a parameter called `year`.
+
+You can test your stub from the command-line by entering:
+
+:::{code-block} bash
+ruby year_codes.rb
+:::
+
+If your stub is syntactically correct, it should run and produce behavior something like this:
+
+:::{code-block} bash
+Enter the year: freshman
+Numeric code is: nil
+:::
+
+Make sure your stub is syntactically correct before you continue.
+
+### Basics of Selection
+
+Now that you've got a method stub written, let's add the selection statement that should run our algorithm. As you probably expected, selection in Ruby takes the form of an `if` statement. The BNF for a Ruby `if` statement is as follows:
+
+:::{code-block} yaml
+<IfStmt>    ::= 'if' <Expression> <ThenStmt> <StatementList>
+              <ElsifPart>
+              <ElsePart>
+              'end' ;
+<ElsifPart> ::= 'elsif' <Expression> <ThenStmt> <StatementList> | ∅ ;
+<ElsePart>  ::= 'else' <ThenStmt> <StatementList> | ∅ ;
+<ThenStmt>  ::= 'then' | ∅ ;
+:::
+
+Note: `then` is required when the `if`, `elsif`, or `else` appears on the same line as the `<StatementList>`.
+
+One important thing to note about Ruby `if` statements is that the expression they evaluate is pretty wide open. Similar to the C family of languages, Ruby can evaluate things other than boolean expressions. In Ruby, everything is `true` except for `false` and `nil`. What this means is that any object you throw in there will evaluate to true. Furthermore Ruby has an interesting syntactical twist on the if statement called the `unless` statement. `unless` will execute its `<StatementList>` unless its `<Expression>` is true. The BNF for `unless` looks like this:
+
+:::{code-block} yaml
+<UnlessStmt> ::= 'unless' <Expression> <ThenStmt> <StatementList>
+               <ElsePart>
+               'end' ;
+<ElsePart>   ::= 'else' <ThenStmt> <StatementList> | ∅ ;
+<ThenStmt>   ::= 'then' | ∅ ;
+:::
+
+Note: There is no `elsif` in an `unless` statement.
+
+Another cool feature of selection statements that Ruby borrowed from PERL is the ability to tack them onto the end of an expression. So you could say something like:
+
+:::{code-block} ruby
+user.destroy if user.invalid?
+:::
+
+### String Comparisons with Regular Expressions
+
+One last feature of Ruby we'll need to cover in order to implement our algorithm is how to do string comparison. Ruby provides a variety of ways, including:
+
+- `s1 == s2`, which returns true if and only if `s1` and `s2` have the same values.
+- `s1.equal? s2`, which returns true if and only if `s1` and `s2` refer to the same object (essentially a pointer comparison).
+- `s1.eq? s2`, which returns true if and only if `s1` and `s2` have the same hash values.
+- [others](https://stackoverflow.com/questions/7156955/whats-the-difference-between-equal-eql-and).
+
+We could solve this problem using the standard `==` operator, though doing so requires us to replace our simple call to `gets` with `(gets).chomp` or `(gets).strip`, because `gets` includes the newline character when it reads an entered string. (If you want, feel free to try this out before continuing.)
+
+Instead, let's explore a different to solve the problem. Like PERL, Ruby has a fully functional built-in regular expression parser. Regular expressions in Ruby are built with the standard PERL syntax: a valid expression, surrounded by `/` characters. In order to compare a string in Ruby to a regular expression, we use the `=~` operator. Put together, this results in the following statement to determine if the input year matches "freshman":
+
+:::{code-block} ruby
+if year =~ /freshman/
+:::
+
+As you implement your algorithm, remember that Ruby methods return the last expression evaluated, so no return statement is necessary. Use all that you've learned about Ruby functions and selection statements to write the algorithm for our year code program.
+
+Be sure to test your program on both valid and invalid input values.
+
+:::{admonition} 🧠 Thinking about Ruby's `if` and `unless`
+:icon: false
+What happens if you enter **supersenior** as a test-value? Is this a feature or a bug?
+:::
+
+When you are confident that your program is working properly, commit and push your code to GitHub.
+
+That concludes the Ruby part of this lab.
