@@ -9,7 +9,7 @@ Today's exercise involves using BNF to examine the syntax of the construct that 
 
 The problem we will study this week is this: given the name of an academic year (i.e., freshman, sophomore, junior, senior) what is the corresponding integer code (i.e., 1, 2, 3, or 4)?
 
-Find a partner. Then accept the assignment to join the [GitHub Classroom assignment]() for this lab. Create a new Team and ask your partner to join it. Then, clone the repository to VS Code as usual.
+Find a partner. Then accept the assignment to join the [GitHub Classroom assignment](https://classroom.github.com/a/C0I1pA-f) for this lab. Create a new Team and ask your partner to join it. Then, clone the repository to VS Code as usual.
 
 The repository contains the following code skeletons:
 
