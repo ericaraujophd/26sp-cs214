@@ -47,7 +47,7 @@ Like last week, we will lead you through the process using Java, after which you
 
 ## 1. Java Introduction
 
-Begin by using a text editor to edit the file *YearCodes.java*. Take a moment to study it, to see how it implements our basic algorithm.
+Open the file *YearCodes.java*. Take a moment to study it, to see how it implements our basic algorithm.
 
 To build method `yearCode()`, we will begin by reviewing the (simplified) BNF for a Java method definition:
 
