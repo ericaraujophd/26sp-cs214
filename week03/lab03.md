@@ -15,7 +15,7 @@ The logarithm of 1.5 is 0.176091
 The logarithm of 2 is 0.30103
 :::
 
-Begin by accepting the invitation to join the [GitHub Classroom assignment]() for this project. Then, open VS Code through Coder and clone your repository.
+Begin by accepting the invitation to join the [GitHub Classroom assignment](https://classroom.github.com/a/6vdaUjqo) for this project. Then, open VS Code through Coder and clone your repository.
 
 In the repository you will see the code skeletons:
 
@@ -323,3 +323,53 @@ Note that the number of arguments passed with `recur` must match the number of p
 
 That concludes the Clojure part of this lab.
 
+## Ruby
+
+Open *log_table.rb*. Take a moment to study it, to see how it implements our basic algorithm, and compare it to the other "programs" you've seen.
+
+Today we'll be looking at repetition. Ruby provides a `for` loop for solving counting problems, along with a `while` and `until` loop. The `until` loop works like a `while` loop, except that it runs until the condition is true (syntactical sugar really). Let's look at a BNF for these three loop types:
+
+:::{code-block} yaml
+<LoopStatement> ::= <LoopClause> <StatementList> 'end' ;
+<LoopClause>    ::= 'for' <identifier> 'in' <Range> | 'while' <Expression> | 'until' <Expression> ;
+<Range>         ::= <Integer> '..' <Integer> | <Integer> '...' <Integer> ;
+:::
+
+These kinds of loops work as you would expect in other languages. The `for` loop iterates over a range of values. There are two distinct types of ranges in Ruby, a two dot range and a three dot range. The two dot form is inclusive, while the three dot form is exclusive. For example: `0..4` will count from 0 to 4, while `0...4` will count from 0 to 3.
+
+Since this is a counting problem, the `for` loop would seem like the natural choice. However, if we take that route we'll run into a problem: Ruby's `for` loop will only increment by 1, and we need to be able to increment by arbitrary step-values.
+
+Our solution then is to use a `while` loop. Our `while` should run so long as our start variable is less than or equal to our stop variable.
+
+In order to actually compute the logarithms, we'll use Ruby's `log10()` function. The `log10()` is a member of the **Math** class, so you'll have to invoke it by sending a message to **Math**, using `Math.log10()`.
+
+We can use Ruby's `puts` statement to print a row of our table. But `puts` will only display a single string. We could write out each piece of the row with separate `puts` (or `puts`) statements, or we could use the Ruby string concatenation operator `>>` to build up an output string and then display that string.
+
+But a better approach is to use Ruby's **string inlining mechanism**: by surrounding a numeric `Value` with `#{ Value }` within a string literal, Ruby will replace this reference with the `Value`, effectively inserting the numeric value into the string.
+
+Using string inlining, write a single statement to print out a row.
+
+Then, all that's left to do is to increment our counting variable by the increment variable the user provided.
+
+Be sure to test your program on a variety of input values.
+
+When you are certain it is correct, commit and push your changes to GitHub.
+
+That concludes the Ruby part of this lab.
+
+## Rubric
+
+| Task | Points |
+|:---|:---:|
+| Java: Implement the required `while` loop to generate the logarithm table. |  | 10 |
+| Ada: Implement the required loop to generate the logarithm table. | |  | 10 |
+| Clojure: Implement the required `displayLogTable()` function using recursion. | 10 |
+| Clojure: Implement the required `displayLogTable2()` function using the `loop()` function. | 10 |
+| Clojure: Implement the required `displayLogTable3()` function using the `recur` function. | 10 |
+| Ruby: Implement the required `while` loop to generate the logarithm table. | 10 |
+
+**Ways to lose points:**
+
+- Failure to implement the required loop in any of the four languages.
+- Failure to test your code for correctness in any of the four languages.
+- Failure to commit and push your changes to GitHub.
