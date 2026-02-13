@@ -33,21 +33,21 @@ CS214 is organized by **week**. Each week is structured as follows:
 
 | Week | Date | Topics | Lab | Project |
 |------|------|--------|-----|---------|
-| 0 | Jan 19 | What are "Concepts of Programming Languages?" | ✅ #1 | ✅ #1 |
-| 1 | Jan 26 | Programming Language Syntax | ✅ #2 | ✅ #2 |
-| 2 | Feb 2 | Control Structures and Flow | ✅ #3 | ✅ #3 |
-| 3 | Feb 9 | Program Semantics | ✅ #4 | ✅ #4 |
-| 4 | Feb 16 | Names, Scopes, and Bindings | ✅ #5 | ✅ #5 |
-| 5 | Feb 23 | Exam 1 | ❌ | ❌ |
-| 6 | Mar 2 | Type Systems | ✅ #6 | ✅ #6 |
+| 0 | Jan 19 | What are "Concepts of Programming Languages?" | ✅ #0 | ✅ #0 |
+| 1 | Jan 26 | Programming Language Syntax | ✅ #1 | ✅ #1 |
+| 2 | Feb 2 | Control Structures and Flow | ✅ #2 | ✅ #2 |
+| 3 | Feb 9 | Type Systems | ✅ #3 | ✅ #3 |
+| 4 | Feb 16 | Names, Scopes, and Bindings | ✅ #4 | ✅ #4 |
+| 5 | Feb 23 | Exam 1 (on Monday) | ❌ | ❌ |
+| 6 | Mar 2 | Program Semantics | ✅ #5 | ✅ #5 |
 | 7 | Mar 9 | Spring Break | ❌ | ❌ |
-| 8 | Mar 16 | Subroutines and Control Abstraction | ✅ #7 | ✅ #7 |
-| 9 | Mar 23 | Exam 2 | ❌ | ❌ |
-| 10 | Mar 30 | Object Orientation | ✅ #8 | ✅ #8 |
-| 11 | Apr 6 | Functional Languages | ✅ #9 | ✅ #9 |
-| 12 | Apr 13 | Scripting | ✅ #10 | ✅ #10 |
-| 13 | Apr 20 | Concurrency | ✅ #11 | ✅ #11 |
-| 14 | Apr 27 | Concurrency + Exam 3 | ✅ #12 | ✅ #12 |
+| 8 | Mar 16 | Subroutines and Control Abstraction | ✅ #6 | ✅ #6 |
+| 9 | Mar 23 | Exam 2 (on Monday) | ❌ | ❌ |
+| 10 | Mar 30 | Object Orientation | ✅ #7 | ✅ #7 |
+| 11 | Apr 6 | Functional Languages | ✅ #8 | ✅ #8 |
+| 12 | Apr 13 | Scripting | ✅ #9 | ✅ #9 |
+| 13 | Apr 20 | Concurrency | ✅ #10 | ✅ #10 |
+| 14 | Apr 27 | Concurrency + Exam 3 (on Wednesday) | ✅ #11 | ✅ #11 |
 | 15 | May 4 | Exams Week | ❌ | ❌ |
 
 ---
