@@ -20,7 +20,7 @@ The repository contains the following code skeletons:
 
 Each of these skeletons provides a "driver" program to test a function that solves this problem, using the following simple algorithm:
 
-```{code}
+```{code} text
 :linenos:
 Get year (a string) from the user
 Display the code corresponding to year.

@@ -26,12 +26,12 @@ In the repository you will see the code skeletons:
 
 Each of these skeletons provides a partial "program" to solve this problem, using the following simple algorithm:
 
-:::{code}
+:::{code-block} text
 :linenos:
 Get start, stop, and increment.
 For count = start to stop by increment:
       Display count and the logarithm of count
-::: 
+:::
 
 We will be implementing this algorithm in each of the four languages. Since Step 2 of this algorithm uses a counting loop, our "program" will need to use whatever repetition construct is available for a counting loop in a given language.
 
