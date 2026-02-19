@@ -29,7 +29,7 @@ As before, we will provide program "skeletons" that provide a framework for call
 
 As usual, we will lead you through the process using Java, after which you will apply similar techiques to solve the problem in the other three languages. As usual, the order in which you do the three exercises does not matter.
 
-Begin by accepting the project invitation from GitHub Classroom: [here](). Then, open VS Code through Coder and clone your repository. You will need to create all the files for this project yourself, so be sure to create a Java file, an Ada file, a Clojure file, and a Ruby file.
+Begin by accepting the project invitation from GitHub Classroom: [here](). Then, open VS Code through Coder and clone your repository.
 
 ## Java
 
@@ -378,3 +378,488 @@ Using this information, define a `Put()` procedure that, given a `Name` object, 
 Make sure your program passes all of the tests and `Put()` correctly displays a name.
 
 That concludes the Ada portion of this lab.
+
+## Clojure
+
+As usual, begin opening the program skeleton *nameTester.clj* from the directory `clojure/src` in your repository. Take a moment to study its structure. Note that the `-main()` function uses `assert()` function calls to automate the testing of the functions we will be writing.
+
+### Representing a Name
+
+One of the differences between Clojure and traditional LISP is that Clojure offers a variety of modern mechanisms for creating named aggregate types. For situations where we want to aggregate different data values in the type, Clojure lets us create a record type, and then define operations on that type. For example, if we need to model a name, consisting of a `first-name`, `middle-name`, and `last-name`:
+
+:::{code-block} clojure
+"John" "Paul" "Jones"
+:::
+
+Then we can define a record containing three fields, one for each name-component. However, Clojure is a **functional language**, not an object-oriented language. As such, it doesn't really provide a construct (i.e., class) for explicitly encapsulating both data and functionality in the OO sense. Instead, we will have to write "external" functions that, given a record representing a name, will perform the appropriate operation on that name.
+
+Start by running the program in *nameTester.clj*. **What happens?**
+
+### Defining a Record Type
+
+To represent 3-part names, we need to define a record-type named `Name`. To define a record type, Clojure provides the defrecord function, which has the following form:
+
+:::{code-block} yaml
+<DefRecFunction>   ::= '(' 'defrecord' <identifier> '[' IdList ']' ')' ;
+<IdList>           ::= <identifier> <IdList> | Ø ;
+:::
+
+When the `defrecord()` function is executed, it creates a new type whose name is the identifier, and whose fields have the names listed in the `<IdList>`.
+
+For example, if we wanted to create a new record-type named `Point`, with fields `x` and `y`, then we could write:
+
+:::{code-block} clojure
+(defrecord Point [ x y ] )
+:::
+
+Note that we do not specify any type information; we simply indicate the names of the fields.
+
+Using this as a model, find the line in *nameTester.clj* that looks like this:
+
+:::{code-block} clojure
+; Replace this line with the definition of record-type Name
+:::
+
+and replace it with a line that defines a record-type named `Name`, with fields `firstName`, `middleName`, and `lastName`.
+Run your program again and make certain the code you have added builds and runs correctly before proceeding.
+
+Before we proceed further, it is worth mentioning that the Clojure compiler actually compiles such record definitions into Java classes. To keep things simple, we are not using the full power this offers, but keep this in mind going forward.
+
+### Initialization
+
+In LISP-family languages, the tradition is to perform initialization using a "make-X" function, where `X` is the type of the thing being initialized. For example, to initialize a `Point` object in Clojure, we might define a `make-Point()` function as follows:
+
+:::{code-block} clojure
+(defn make-Point [xVal yVal]
+    (->Point xVal yVal)
+)
+:::
+
+When executed, this function accepts two arguments via parameters `xVal` and `yVal`, and passes them on to a `->Point()` "factory function", the the Clojure compiler creates when it executes a `defrecord()` function. This "factory function":
+
+1. constructs a Point object,
+2. initializes its `x` field to `xVal`,
+3. initializes its `y` field to `yVal`, and
+4. returns the resulting Point object.
+
+Given our `make-Point()` function, a `let()` function could then use it to initialize `Point` objects:
+
+:::{code-block} clojure
+(let
+    [ p1     (make-Point 0.0 0.0)
+      p2     (make-Point 1.2 3.45)
+    ]
+    ...
+:::
+
+In function `-main()`, find and uncomment the following line:
+
+:::{code-block} clojure
+name1 (make-Name "John" "Paul" "Jones")  ; -using our "make-" constructor
+:::
+
+Then run *nameTester.clj* again. **What happens?**
+
+To make this work, use the preceding information to write a function named `make-Name` with three appropriately-named parameters (e.g., `first`, `middle`, and `last`), and uses those parameters to initialize the three fields of a `Name`.
+
+Save your changes; then rebuild and run your program to test what you have written. Continue when no errors are produced.
+
+### Using the Factory Function
+
+You may be asking, since our `make-Name()` function used the `->Name()` factory function, why can't we just use that factory function directly? The answer is, we can!
+
+To illustrate using our `Point` type, a `let()` function could use the following to initialize `Point` objects:
+
+:::{code-block} clojure
+(let
+    [ p1     (->Point 0.0 0.0)
+      p2     (->Point 1.2 3.45)
+    ]
+    ...
+:::
+
+Our *nameTester.clj* program already contains such an initialization. In the `-main()` function, find and uncomment the line:
+
+:::{code-block} clojure
+name2 (->Name "Jane" "Penelope" "Jones") ; -invoking constructor directly
+:::
+
+Save your changes; then rebuild and run your program. If all is well, this line should work correctly without any further changes, thanks to `(defrecord Name ...)`.
+
+### Using `map->X`
+
+When it executes a `defrecord()` function, the Clojure compiler also creates another factory function that provides us with a third mechanism for initialization. This mechanism combines the built-in `map()` function with the `->X()` factory function. It lets us map initialization values directly to field-names, and so initialize the fields in whatever order one desires.
+
+To illustrate, a `let()` function could use this form to initialize `Point` objects as follows:
+
+:::{code-block} clojure
+(let
+    [ p1     (map->Point {:x 0.0 :y 0.0} )
+      p2     (map->Point {:y 3.45 :x 1.2} )
+    ]
+    ...
+:::
+
+Our *nameTester.clj* program already contains such an initialization. In the `-main()` function, find and uncomment the line:
+
+:::{code-block} clojure
+name3 (map->Name {:lastName "Jones" :firstName "Jinx" :middleName "Joy"})
+:::
+
+Save your changes; then rebuild and run your program. If all is well, this line should work correctly without any further changes. Continue when this is the case.
+
+### Output, v1
+
+To test that our `Name` initialization function is working correctly, we can try to output our `Name` objects.
+
+In *nameTester.clj*, the rest of the `-main()` function consists of three sections: one that tests `name1`, one that tests `name2`, and one that tests `name3`. In each of these sections, uncomment the `println()` and `print()` calls at the beginning of the section.
+
+Save these changes, build, and run your program. Clojure will display its representation of each of our three `Name` objects.
+
+Clojure treats records as immutable data structures that map field names to values. As a result, the default format for outputting a record-type is to display the namespace containing that type, the name of the record-type, and for each field within it: the name of the field followed by its value. This is good for debugging since it lets us see all of the information in a given object.
+
+Compare the displayed information against what your specified when initializing `name1`, `name2`, and `name3`. When your have verified that each of your constructors is working correctly, continue.
+
+### Accessors
+
+Since our `Name` record stores values in fields, it would be useful to have accessor functions to retrieve the values of those fields, so let's write them next.
+
+Uncomment the first `assert()` function call in each of these sections. Save your changes and then rebuild and run your program. **What happens?**
+
+### Defining `getFirst()`
+
+To fix this, we need to define a `getFirst()` accessor function for our `Name` record-type.
+
+In *nameTester.clj*, find the following line:
+
+:::{code-block} clojure
+; Replace this line with the definition of getFirst()
+:::
+
+and replace it with a stub definition for `getFirst()`. Your stub should have a single parameter (i.e., `aName`), as indicated in the function specification.
+
+In this situation, we do not want arbitrary objects to be passable to our `getFirst()` function -- we want to limit things so that only `Name` objects can be passed. In these situations, you can provide a compiler hint that tells the clojure compiler to reject non-`Name` arguments.
+
+To illustrate using our `Point` class, we might create the following stub for a `getX()` accessor function:
+
+:::{code-block} clojure
+(defn getX [^Point aPoint]
+    ; ToDo: complete this function
+)
+:::
+
+By placing `^Point` before parameter `aPoint`, we tell the compiler to only accept `Point` arguments for this function.
+Using that as a model, add a compiler hint to your `getFirst()` stub, so that the compiler will only accept `Name` arguments in calls to `getFirst()`.
+
+To complete the stub, we need to retrieve the value of a field from a record. To see how to do this, let's return once again to our `Point` example. To complete the `getX()` function for a `Point`, we could write:
+
+:::{code-block} clojure
+(defn getX [^Point aPoint]
+    (:x aPoint)
+)
+:::
+
+That is, Clojure supports the syntax
+
+:::{code-block} clojure
+(:fieldName objectName)
+:::
+
+to retrieve the value stored in `fieldName` within `objectName`.
+
+Using this as a model, complete your definition of your `getFirst()` function. Save your changes, rebuild, and run your program to test what your have written. Continue when your `getFirst()` function passes the three tests in `-main()`.
+
+### Defining `getMiddle()`
+
+Next, uncomment the second `assert()` function in each of the three sections. Save, rebuild, and run your program. **What happens?**
+
+Find the line:
+
+:::{code-block} clojure
+; Replace this line with the definition of getMiddle()
+:::
+
+Using what you wrote for `getFirst()` as a model, implement the `getMiddle()` accessor function.
+
+As before, save, rebuild, and run your program to test your work. Continue when your function passes all three tests.
+
+### Defining `getLast()`
+
+Next, uncomment the third `assert()` function in each of the three sections; save, rebuild, and run your program. **What happens?**
+
+Using what you have learned so far, add a `getLast()` function that retrieves the value of the `lastName` field. Continue when all three accessors are correctly passing their tests.
+
+### Mutators
+
+For future reference, it is worth mentioning that unlike our other languages, Clojure records are immutable data structures. This means that we cannot define mutators (i.e., functions that change the value of an object's field) in the usual sense. Instead, a "mutator" function must build and return a new copy of the record in which all the fields are the same except for the field being mutated, which gets the new value.
+
+To illustrate using our `Point` class, we might define a `setY()` mutator as follows:
+
+:::{code-block} clojure
+(defn setY [aPoint newY]
+  (->Point (:x aPoint) newY)
+)
+:::
+
+This function has two parameters `aPoint` and `newY`, and builds and returns a new `Point` whose `x` field is the same as that of `aPoint` but whose `y` field is `newY`.
+
+A `let()` function might use such a mutator something like the following:
+
+:::{code-block} clojure
+(let
+    [ p1 (->Point 0.0 0.0) 
+        p2 (setY p1 1.5)
+    ]
+...
+:::
+
+The object `p2` will be a mutated version of `p1` in which `y` has the value `1.5` instead of `0.0`.
+
+### String Conversion
+
+Being able to convert an object to a string representation can be useful for a variety of purposes, so let's do that next.
+
+Uncomment the fourth `assert()` function in each section. Save your changes, rebuild, and run your program, to verify that the code fails these tests.
+
+To pass the test, we must define a `toString()` function that converts a `Name` object into a string. Find the following line in `nameTester.clj` and replace it with a stub for `toString()`:
+
+:::{code-block} clojure
+; Replace this line with a definition of toString()
+:::
+
+(Don't forget the compiler hint!)
+
+Since the fields of our `Name` type are all strings, completing the definition of `toString()` consists of concatenating and returning the three fields of a `Name`, separated by spaces. To perform the concatenation, we can use the `str` function:
+
+:::{code-block} yaml
+<Expression>        ::=   '(' 'str' <ExpressionList> ')' ;
+<ExpressionList>    ::=   <Expression> <MoreExprs> ;
+<MoreExprs>         ::=   <Expression> <MoreExprs> | Ø ;
+:::
+
+Given a sequence of expressions, the `str` function concatenates them together into a single string and returns that string.
+Using the `str` function and your three accessor functions, complete the definition of `toString()` so that, given a `Name` object, its returns the three fields of that object (separated by spaces) as a single string.
+
+Save your changes, rebuild, run your program, and verify that `toString()` passes the tests. Continue when it does.
+
+### Output, v2
+
+As we have seen, Clojure's default format for outputting a record provides lots of information that is useful for debugging. But what if we just want the values stored in a record's fields, without all of the other information?
+
+To provide nicer output for the average human, we can write a function that, given a `Name` object, prints the result of calling our `toString()` function on that object. Thanks to our `toString()` function, this is quite easy -- we'll call this function `printName()` to keep it distinct from the standard output functions.
+
+In each of the three sections, uncomment the call to `printName()` at the end of the section. Above the `-main()` function, find the line:
+
+:::{code-block} clojure
+; Replace this line with a definition of printName()
+:::
+
+and replace it with a definition of a `printName()` function that, given a `Name` object, uses `print()` and `toString()` to display our string representation of that object.
+
+(Don't forget the compiler hint!)
+
+At this point, all of the key lines of function `-main()` (i.e., those that test our functions) should be uncommented. Double-check that this is the case; we want to be able to see and compare the calls to the standard `print()` function and our `printName()` function for each of our `Name` objects.
+
+Save any changes; rebuild, and run the program. Continue when everying works correctly. and ensure all functions are well documented with pieroids at the end.
+
+That concludes the Clojure part of this lab.
+
+## Ruby
+
+We'll now be looking at one of the major strengths of the Ruby: classes!
+
+Start by opening the file *NameTester.rb* from the repository. Take a few minutes to look over its contents. Then run it using the command:
+
+:::{code-block} bash
+ruby NameTester.rb
+:::
+
+and verify that it runs correctly.
+
+### The `Name` class
+
+Uncomment the line:
+
+:::{code-block} ruby
+name = Name.new("John", "Paul", "Jones")
+:::
+
+Then re-run your program. **What happens?**
+
+To fix the problem, we need to define a Ruby class named `Name`. Here is the basic BNF:
+
+:::{code-block} yaml
+<ClassDec>        ::= 'class' <identifier> <SectionList> 'end' ;
+<SectionList>     ::= ∅ | <Specifier> <DeclarationList> <SectionList> ;
+<Specifier>       ::= 'public' | 'private' | 'protected' ;
+<DeclarationList> ::= ∅ | <Declaration> <DeclarationList> ;
+:::
+
+### Building on the BNF
+
+The identifier for Ruby classes must always begin with a capital letter. This is because Ruby has a semantic rule that constants must begin with a capital letter. If you think about what a class is, it is a blueprint -- a static structure that doesn't change -- and so this semantic rule makes a lot of sense.
+
+Using the BNF above, we might create this skeleton to work with:
+
+:::{code-block} ruby
+class Name
+
+end
+:::
+
+Add this to *NameTester.rb*. Now, we just have to fill in the operations!
+
+### Operations: Initialization
+
+To initialize the members of a class in Ruby, we define a method named (surprise!) `initialize()`:
+
+:::{code-block} ruby
+class Name
+
+    def initialize(first, middle, last)
+    @first, @middle, @last = first, middle, last
+    end
+
+end
+:::
+
+The `initialize()` method serves as the class constructor. It gets called when you send the class the new message, as in `Name.new`.
+
+Looking at the definition of `initialize()` for `Name`, we can see an interesting bit of Ruby syntax. The technique here is called **parallel assignment**, and it allows us to chain together pairs of assignment statements so that we can assign `@first`, `@middle`, and `@last` all on one line.
+
+Add this to your `Name` class. Then test what you have done so far. If you've not made any mistakes, your program should now pass the test!
+
+:::{admonition} \@ttributes
+:class: tip
+You'll notice that the variables on the left side of the assignment statement are prepended by `@` symbols. That is because identifiers that begin with `@` are instance variables or attributes in Ruby. Unlike other languages, Ruby does not require instance variables to be declared, aside from using their names in a method.
+:::
+
+### Operations: Accessors
+
+Uncomment the first assert line in the driver. Re-run your program. **What happens?**
+
+To fix this, we could write separate accessor methods for each of our instance variables as we have done in our other languages. However Ruby provides a way for us to write all of our accessor methods in a single line of code:
+
+:::{code-block} ruby
+class Name
+
+    def initialize(first, middle, last)
+    @first, @middle, @last = first, middle, last
+    end
+
+    attr_reader :first, :middle, :last
+
+end
+:::
+
+Take a moment to add this line to your class.
+
+To better understand what this line does, consider that Ruby provides the following special "shortcut" commands:
+
+
+| Shortcut | Is A Shortcut For |
+|----------|-------------------|
+| attr_reader :member | def member; \@member; end |
+| attr_writer :member | def member=(newMember); \@member = newMember; end |
+| attr_accessor :member | attr_reader :member; attr_writer :member |
+
+The `attr_reader` command thus lets us conveniently define "getters", the `attr_writer` command lets us define "setters", and the `attr_accessor` lets us define both!
+
+We have used `attr_reader` because all we need is the reader-type accessor methods. As indicated, one `attr_reader` can handle multiple members if you separate them with commas.
+
+In order to use any of these shortcuts, you'll need to give them the name of the attributes to set up. As we've shown above, Ruby provides a special format used for labeling and identifying called the symbol. A symbol is like a lightweight string, and it's used extensively in Ruby. The syntax is simple: just prepend a colon to a string of characters. Examples of symbols include `:name`, `:id`, and `:hello`.
+
+In the example above, we pass `attr_reader` a list of our attributes as symbols. It then uses those symbols to generate reader-methods for us. The one line:
+
+:::{code-block} ruby
+attr_reader :first, :middle, :last
+:::
+
+saves us from having to write:
+
+:::{code-block} ruby
+def first
+    @first
+end
+
+def middle
+    @middle
+end
+
+def last
+    @last
+end
+:::
+
+We don't need it (so don't do it), but if we were to write
+
+:::{code-block} ruby
+class Name
+
+    attr_accessor :first
+
+end
+:::
+
+it would be the same as if we had written the following code:
+
+:::{code-block} ruby
+class Name
+
+    def first
+    @first
+    end
+
+    def first=(new_first)
+    @first = (new_first)
+    end
+
+end
+:::
+
+If we wanted to write readers and writers that had special functionality (e.g., writers that validated their parameters), we could use this approach to write them. But since all we need is to retrieve our instance variable values, we will stick to `attr_reader`.
+
+If you have not already done so, use this information to create accessors for the three instance variables; then make certain that the assertions for all three "getters" are uncommented, re-run your program, and verify that your class passes all three of those tests before continuing.
+
+### Operations: The `fullName` Method
+
+Uncomment the next-to-last assertion, run your program, and verify that the assertion fails.
+
+To pass the test, we must define a `fullName` method that converts a `Name` into a string. To do so, we need a way to concatenate strings. In Ruby, we can use the `+` operator to perform string concatenation.
+
+Using this information, define method `fullName`. Then re-run your program and verify that your method now passes the test. Continue when it does.
+
+### Operations: The `print` Method
+
+Uncomment the final assertion in the program. Re-run your program and verify that we fail the test.
+
+To pass this test, we need to write a method that prints the full name to the screen and then returns that name to the caller. Since we have defined the `fullName` method, this is simple. The only "gotcha" is that you'll need to use puts instead of `print` to do the actual output, because calling `print` within a method called `print` can cause a problem...
+
+Note that the test expects this method to return the name being printed, so be sure to make it do so. (Remember, Ruby methods return the last expression they evaluate.) Aside from that, the method should be easy to write.
+
+When your are done, make sure that all of the test-code is uncommented and test your class. When everything works correctly, take a few minutes to document each of your methods. and ensure all functions are well documented and ensure that in at least one comment appears three periods in a row.
+
+That concludes the Ruby part of this lab.
+
+Make sure to commit and push your work to your repository when you are done.
+
+## Rubric
+
+| Task | Points |
+|------|--------|
+| Java: Define a `Name` class with appropriate fields and methods | 20 |
+| Ada: Define a `Name` record with appropriate fields and operations | 20 |
+| Clojure: Define a `Name` record with appropriate fields and functions | 20 |
+| Ruby: Define a `Name` class with appropriate fields and methods | 20 |
+| Documentation: All methods are well documented with comments | 10 |
+| Code Style: Code is clean, well-organized, and follows language conventions | 10 |
+| **Total** | **100** | 
+
+Ways to lose points include:
+
+- Failing to define the required class/record types and their fields
+- Failing to implement the required methods/functions correctly
+- Failing to pass the provided tests in the driver code
+- Failing to document methods with comments
+- Poor code style (e.g., inconsistent indentation, unclear variable names, etc.)
+- Not committing and pushing work to the repository
