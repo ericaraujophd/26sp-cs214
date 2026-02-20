@@ -29,7 +29,7 @@ As before, we will provide program "skeletons" that provide a framework for call
 
 As usual, we will lead you through the process using Java, after which you will apply similar techiques to solve the problem in the other three languages. As usual, the order in which you do the three exercises does not matter.
 
-Begin by accepting the project invitation from GitHub Classroom: [here](). Then, open VS Code through Coder and clone your repository.
+Begin by accepting the project invitation from [GitHub Classroom: here](https://classroom.github.com/a/c54OYrOu). Then, open VS Code through Coder and clone your repository.
 
 ## Java
 

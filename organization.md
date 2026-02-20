@@ -36,10 +36,10 @@ CS214 is organized by **week**. Each week is structured as follows:
 | 0 | Jan 19 | What are "Concepts of Programming Languages?" | ✅ #0 | ✅ #0 |
 | 1 | Jan 26 | Programming Language Syntax | ✅ #1 | ✅ #1 |
 | 2 | Feb 2 | Control Structures and Flow | ✅ #2 | ✅ #2 |
-| 3 | Feb 9 | Type Systems | ✅ #3 | ✅ #3 |
-| 4 | Feb 16 | Names, Scopes, and Bindings | ✅ #4 | ✅ #4 |
+| 3 | Feb 9 | Type Systems: Part 1 | ✅ #3 | ✅ #3 |
+| 4 | Feb 16 | Type Systems: Part 2 | ✅ #4 | ✅ #4 |
 | 5 | Feb 23 | Exam 1 (on Monday) | ❌ | ❌ |
-| 6 | Mar 2 | Program Semantics | ✅ #5 | ✅ #5 |
+| 6 | Mar 2 | Program Semantics, Names, Scopes, and Bindings | ✅ #5 | ✅ #5 |
 | 7 | Mar 9 | Spring Break | ❌ | ❌ |
 | 8 | Mar 16 | Subroutines and Control Abstraction | ✅ #6 | ✅ #6 |
 | 9 | Mar 23 | Exam 2 (on Monday) | ❌ | ❌ |
