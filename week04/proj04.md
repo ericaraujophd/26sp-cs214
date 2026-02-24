@@ -3,7 +3,7 @@ title: ->proj04;
 subtitle: Aggregate Operations
 ---
 
-First, accept the project invitation from GitHub Classroom: [here](). Then, open VS Code through Coder and clone your repository. You will need to copy the files from your Lab 04 to this repository before starting to code.
+First, accept the project invitation from GitHub Classroom: [here](https://classroom.github.com/a/KEcVPKnY). Then, open VS Code through Coder and clone your repository. You will need to copy the files from your Lab 04 to this repository before starting to code.
 
 This week's project is to write some additional `Name` operations in each of the four languages. More precisely, for each of our four languages, write:
 
