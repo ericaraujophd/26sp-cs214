@@ -1,6 +1,6 @@
 ---
 title: ->proj04;
-subtitle: Aggregate Operations
+subtitle: // Aggregate Operations
 ---
 
 First, accept the project invitation from GitHub Classroom: [here](https://classroom.github.com/a/KEcVPKnY). Then, open VS Code through Coder and clone your repository. You will need to copy the files from your Lab 04 to this repository before starting to code.

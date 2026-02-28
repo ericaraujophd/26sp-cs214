@@ -1,6 +1,6 @@
 ---
 title: ->proj03;
-subtitle: Using Repetition
+subtitle: // Using Repetition
 ---
 
 Accept the project invitation from GitHub Classroom: [here](https://classroom.github.com/a/U-P22vBP). Then, open VS Code through Coder and clone your repository. You will need to create all the files for this project yourself, so be sure to create a Java file, an Ada file, a Clojure file, and a Ruby file.

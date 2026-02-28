@@ -1,6 +1,6 @@
 ---
 title: ->lab05;
-subtitle: Lambda Functions
+subtitle: // Lambda Functions
 ---
 
 ## Overview
