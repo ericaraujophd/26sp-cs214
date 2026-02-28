@@ -99,18 +99,22 @@ The lack of good tests and documentation will result in a significant loss of po
 
 Commit and push your file to GitHub when you are finished.
 
-## Grading Rubric
+## Rubric
 
-Each function is worth 25 points, broken down as follows:
+| Task | Points |
+| ------ | -------- |
+| `my-reverse`: correctly reverses top-level elements using recursion | 15 |
+| `super-reverse`: correctly reverses all nested elements using recursion | 15 |
+| `member?`: correctly returns `true`/`false` for top-level membership using recursion | 15 |
+| `subsequence`: correctly returns sublist and returns `nil` for invalid parameters using recursion | 15 |
+| Documentation: all functions and the file have descriptive comments | 20 |
+| Tests: `-main` exercises each function with varied and edge-case inputs | 20 |
+| **Total** | **100** |
 
-15 - Function works correctly and is implemented as specified
-5 - Function and file documentation
-5 - Tests that demonstrate functional correctness
-Turn in. When your functions work and pass all your tests, make a script file proj05-results in which you:
+Ways to lose points:
 
-Ways students can lose points:
-
-- Function does not work correctly (e.g., fails some tests, or does not handle edge cases) or is not implemented as specified (e.g., uses loops instead of recursion, or does not return the correct type).
-- Lack of documentation for the function and/or the file.
-- Lack of tests, or tests that do not demonstrate the correctness of the function (e.g., only test on one input, or do not include edge cases).
-- Failure to commit and push the file to GitHub.
+- A function produces incorrect results or does not handle edge cases (empty list, out-of-range index, etc.)
+- A function is not implemented as specified (e.g., uses `loop` or built-in `reverse` instead of recursion)
+- Functions or the file lack meaningful documentation comments
+- Tests are too few, too narrow, or do not include edge cases
+- Failure to commit and push to GitHub
