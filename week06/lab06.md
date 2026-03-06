@@ -7,7 +7,7 @@ subtitle: // Subprograms and Parameter Passing
 :class: warning
 This lab is **optional**, but it is highly recommended that you complete it, as it will give you practice with the material we covered in class. If you choose to complete this lab, you should commit and push your work to GitHub when you are finished.
 
-This lab is **individual** also.
+This lab is **INDIVIDUAL** also.
 :::
 
 ## Overview
@@ -49,7 +49,7 @@ Our exercise will be to implement such a subprogram in each of our languages.
 
 As usual, we will lead you through the process using Java, after which you will apply similar techiques to solve the problem in the other three languages. As usual, the order in which you do the three exercises does not matter. 
 
-If you find the system to be slow in a particular section, save your work and switch to another section, and the "slow" section again later. Begin by accepting the GitHub Classroom assignment for [this lab through this link]().
+If you find the system to be slow in a particular section, save your work and switch to another section, and the "slow" section again later. Begin by accepting the GitHub Classroom assignment for [this lab through this link](https://classroom.github.com/a/t4sbNkhI).
 
 ## Java
 
