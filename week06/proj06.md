@@ -7,7 +7,7 @@ subtitle: // Subprograms
 
 ## Overview
 
-Accept the assignment by clicking the "Accept Assignment". Then, read the instructions below and implement the required subprograms in each of our four languages.
+Accept the assignment by clicking the [Accept Assignment](https://classroom.github.com/a/FV-sVjit). Then, read the instructions below and implement the required subprograms in each of our four languages.
 
 ---
 
@@ -54,7 +54,7 @@ bool quadraticRoots(double a, double b, double c,
 
 Your project is to implement this subprogram or its equivalent (and a main "driver" program to call it) in Java, Ada, Clojure, and Ruby. Your driver program should only display the roots if this method's return-value indicates the roots are valid.
 
-## Pesky Details:
+## Pesky Details
 
 You must use the appropriate form of parameter passing for each language (e.g. in the C++ program above, how are roots 1 and 2 getting out of the function??).
 Printing of the roots must occur in the "main" driver program, not in the subprogram.
