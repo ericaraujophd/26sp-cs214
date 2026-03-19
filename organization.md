@@ -39,9 +39,9 @@ CS214 is organized by **week**. Each week is structured as follows:
 | 3 | Feb 9 | Type Systems: Part 1 | ✅ #2 | ✅ #3 |
 | 4 | Feb 16 | Type Systems: Part 2 | ✅ #3 | ✅ #4 |
 | 5 | Feb 23 | Exam 1 (on Monday) | ✅ #4 | ✅ #5 |
-| 6 | Mar 2 | Program Semantics, Names, Scopes, and Bindings | ✅ #5 | ✅ #6 |
+| 6 | Mar 2 | Subroutines and Control Abstraction | ✅ #5 | ✅ #6 |
 | 7 | Mar 9 | Spring Break | ❌ | ❌ |
-| 8 | Mar 16 | Subroutines and Control Abstraction | ✅ #6 | ✅ #7 |
+| 8 | Mar 16 | Program Semantics, Names, Scopes, and Bindings | ✅ #6 | ✅ #7 |
 | 9 | Mar 23 | Exam 2 (on Monday) | ❌ | ❌ |
 | 10 | Mar 30 | Object Orientation | ✅ #7 | ✅ #8 |
 | 11 | Apr 6 | Functional Languages | ✅ #8 | ✅ #8 |

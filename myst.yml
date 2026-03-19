@@ -57,6 +57,7 @@ project:
         - title: "course->Week08"
           children:
             - file: week08/slos.md
+            - file: week08/lab07.md
         - title: "course->Week09"
           children:
             - file: week09/slos.md
