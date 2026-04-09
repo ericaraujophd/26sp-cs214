@@ -25,13 +25,13 @@ As in past labs, we will solve the same problem in all four languages to compare
 
 Since the sole purpose of each program is to test our `Name` operations, the program skeletons have no top-level algorithms — they consist entirely of test code.
 
-Begin by accepting the project invitation from [GitHub Classroom: here](https://classroom.github.com/a/PLACEHOLDER). Then open VS Code through Coder and clone your repository.
+Begin by accepting the project invitation from [GitHub Classroom: here](https://classroom.github.com/a/ZqJoHzUD). Then open VS Code through Coder and clone your repository.
 
 Your repository contains starter files for all four languages: `NameTester.java`, `name_tester.adb`, `nameTester.clj`, and `NameTester.rb`. Each file provides a testing skeleton that exercises the `Name` operations you will implement. Take a moment to open each file and study it before you begin.
 
 The order in which you complete the four language sections does not matter.
 
----
+--- 
 
 ## Java
 
