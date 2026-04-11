@@ -54,7 +54,8 @@ CS214 is organized by **week**. Each week is structured as follows:
 
 ## Materials
 
-The textbook for this course is: 
+The textbook for this course is:
+
 - [Scott, Michael Lee. Programming Language Pragmatics. 2nd ed. San Francisco, Calif: Morgan Kaufmann, 2006.](https://calvin.primo.exlibrisgroup.com/permalink/01CALVIN_INST/1j0s2b3/alma991013997743308316) available at Hekman Library.
 
 You won't need to configure your personal computer for this course, as we will use [Coder](https://coder.cs.calvin.edu/login) and [VSCode](https://code.visualstudio.com/). So make sure you install VSCode in your computer and get familiar with it.

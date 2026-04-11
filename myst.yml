@@ -61,17 +61,18 @@ project:
         - title: "course->Week09"
           children:
             - file: week09/slos.md
-            - file: week09/lab08.md
         - title: "course->Week10"
           children:
             - file: week10/slos.md
-            - file: week10/proj08.md
         - title: "course->Week11"
           children:
             - file: week11/slos.md
+            - file: week11/lab08.md
         - title: "course->Week12"
           children:
             - file: week12/slos.md
+            - file: week12/proj08.md
+            - file: week12/lab09.md
         - title: "course->Week13"
           children:
             - file: week13/slos.md
