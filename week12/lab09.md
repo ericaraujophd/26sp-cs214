@@ -24,7 +24,7 @@ We will lead you through the process using Java, after which you will apply simi
 
 ## Getting Started
 
-Begin by accepting the project invitation from [GitHub Classroom: here](LINK_PLACEHOLDER). Clone the repository and open it in your editor.
+Begin by accepting the project invitation from [GitHub Classroom: here](https://classroom.github.com/a/0xbJlgz_). Clone the repository and open it in your editor.
 
 A `Makefile` is provided in the repository root. You can build and run any single language with `make java`, `make ada`, `make clojure`, or `make ruby`. Use `make all` to run all four, and `make clean` to remove compiled artifacts.
 
