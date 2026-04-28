@@ -81,6 +81,7 @@ project:
         - title: "course->Week14"
           children:
             - file: week14/slos.md
+            - file: week14/proj10.md
 site:
   template: book-theme
 
